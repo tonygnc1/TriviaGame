@@ -11,9 +11,9 @@ body {
 
 .container {
     width: 1800px;
-    height: 600px;
+    height: 700px;
     max-width: 80%;
-    margin: 0px 50px 0px 350px;
+    margin:350px 50px 0px 350px;
     background-color: rgb(246, 242, 10);
     /* opacity: 0.7;
     filter: Alpha(opacity=90); */
@@ -38,5 +38,38 @@ body {
     height: 75px;
     padding: 0 auto;
     float: right;
-    margin: 100px 505px 100px 100px;
+    margin: 100px 505px 100px 50px;
   }
+
+  .form1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: rgb(10, 10, 10);
+    background-color: 'rgba(255, 255, 255, 0.5)';
+    width: 800px;
+    height: 75px;
+    padding: 10px;
+    float: none;
+    margin: 0px 100px 0px 450px;
+  }
+
+  .correct {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color: 'rgba(255, 255, 255,)';
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    float: left;
+    margin: 200px 100px 0px 20px;
+  }
+
+  .incorrect {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black
+  }
+ #click {
+
+ }
