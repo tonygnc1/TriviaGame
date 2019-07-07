@@ -9,9 +9,15 @@
 //       // Animation complete.
 //     });
 //   });
+var correctAnswer=true;
+var incorrectAnswer=false;
+var buttonChoice="";
+var answer="";
+
+
 
 $(function() {
-    $("button").click(function(e) {
+    $("#button").click(function(e) {
       $(".startButton").show();
   
       e.stopPropagation(); // if the event occur inside the container, prevent it from bubbling up to the document and fires the bellow function
@@ -20,6 +26,16 @@ $(function() {
     $(button).click(function(e) { // if the click target is the .container (or something inside it) this event will never reach the document because of the stop propagation inside the above listener. So if this is fired then the target is not the wrapper, therefore we should hide the button
       $(".startButton").hide();
     });
+    if (checked == correctAnswer) {
+        document.getElementById("wins").textContent = ++correctAnswer;
+        startNewGame()
+        console.log(correctAnswer);
+
+       if (checked == incorrectAnswer) {
+            document.getElementById("losses").textContent = ++incorrectAnswer;
+            startNewGame()
+            console.log(incorrectAnswer);
+       }}
 //   });
 
 
