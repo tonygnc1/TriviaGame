@@ -15,28 +15,36 @@ var buttonChoice="";
 var answer="";
 
 
-
+// Upon selecting start, the button will disappear and the question will appear in its place
 $(function() {
     $("#button").click(function(e) {
-      $(".startButton").show();
-  
-      e.stopPropagation(); // if the event occur inside the container, prevent it from bubbling up to the document and fires the bellow function
+      $("$startButton").show();
+  console.log("Works here");
+
+      e.stopPropagation(); // 
     });
   
-    $(button).click(function(e) { // if the click target is the .container (or something inside it) this event will never reach the document because of the stop propagation inside the above listener. So if this is fired then the target is not the wrapper, therefore we should hide the button
-      $(".startButton").hide();
+    $(button).click(function(e) { 
+      $("$startButton").hide();
     });
+
+
+// The selected answer is shown an alert box with Correct or Incorrect Response
     if (checked == correctAnswer) {
-        document.getElementById("wins").textContent = ++correctAnswer;
+        document.getElementById("correctAnswer").textContent = ++correctAnswer;
         startNewGame()
+        alert("Correct answer")
         console.log(correctAnswer);
 
        if (checked == incorrectAnswer) {
-            document.getElementById("losses").textContent = ++incorrectAnswer;
+            document.getElementById("incorrectAnswer").textContent = ++incorrectAnswer;
             startNewGame()
+            alert("Incorrect answer")
             console.log(incorrectAnswer);
        }}
-//   });
+
+    //    When the answer is selected and alert shown, a 2 second timer will hide the question
+// and the next question will be unhid slowly in its place.
 
 
 

@@ -18,22 +18,19 @@
         <div class="container">
 
             <p class="h3" Totally Trivia Night></p>
-            <!-- style="width:1100px; height: 100px; font-size: 80px; margin: 20px 30px 20px 75px; text-align: center; padding: 20px; color: rgb(231, 19, 19); text-anchor: center; font-family: 'Bungee Inline', cursive"> -->
 
-
-            <!-- <div class="startButton">Let The Game Begin</div> -->
+            <!-- Display answer choices -->
             <div class="row">
                 <div class="col-lg-3">
                     <div class="correct">
-                        <p>Correct Answers:</p><span>checked</span>
+                        <p>Correct Answers:</p><span class="correctAnswer"></span>
                         <br>
-                        <p>Incorrect Answers:</p><span>checked</span>
+                        <p>Incorrect Answers:</p><span class="incorrectAnswer"></span>
 
                     </div>
                 </div>
-
+                <!-- Display the Start Button. -->
                 <div class="col-lg-9">
-
                     <button type="button" class="startButton">
                         <div id="click">
                             <p>Let's Get Started</p>
@@ -51,7 +48,7 @@
                             <br>
                             <input type="radio" name="colors" id="true">True<br>
                             <br>
-                            
+
                             <input type="radio" name="colors" id="false">False
                             <br>
                 </form>
@@ -60,11 +57,11 @@
 
                 <script>
                     function check() {
-                        document.getElementById("true").checked = true;
+                        document.getElementById("correctAnswer").checked = true;
                     }
 
                     function check() {
-                        document.getElementById("false").checked = false;
+                        document.getElementById("incorrectAnswer").checked = false;
                     }
                 </script>
             </div>
