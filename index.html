@@ -16,41 +16,49 @@
 <body>
     <div class="body">
         <div class="container">
+            <!-- <div class="row">
+                <div class="col-lg-12"> -->
+                    <div class="h3">
+                        <p>Totally Trivia Night</p>
 
-            <p class="h3" Totally Trivia Night></p>
-
+                    </div>
+                <!-- </div>
+            </div> -->
+            <!-- Display the Start Button. -->
+            <!-- <div class="row">
+                <div class="col-lg-12"> -->
+                    <button type="button">
+                        <div class="startButton">
+                            <div id="click">
+                                <p>Let's Get Started</p>
+                            </div>
+                        </div>
+                    </button>
+                <!-- </div>
+            </div> -->
             <!-- Display answer choices -->
-            <div class="row">
-                <div class="col-lg-3">
+            <!-- <div class="row">
+                <div class="col-lg-12"> -->
                     <div class="correct">
                         <p>Correct Answers:</p><span class="correctAnswer"></span>
                         <br>
                         <p>Incorrect Answers:</p><span class="incorrectAnswer"></span>
-
                     </div>
-                </div>
-                <!-- Display the Start Button. -->
-                <div class="col-lg-9">
-                    <button type="button" class="startButton">
-                        <div id="click">
-                            <p>Let's Get Started</p>
-                        </div>
-                    </button>
-
-
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
             <div class="form1">
                 <form>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            The Flag has 50 stripes.<br>
+                    <!-- <div class="row">
+                        <div class="col-lg-12"> -->
+
                             <br>
                             <input type="radio" name="colors" id="true">True<br>
                             <br>
 
                             <input type="radio" name="colors" id="false">False
                             <br>
+                        <!-- </div>
+                    </div> -->
                 </form>
                 <br>
                 <button onclick="check()">Select Answer</button>
@@ -59,7 +67,6 @@
                     function check() {
                         document.getElementById("correctAnswer").checked = true;
                     }
-
                     function check() {
                         document.getElementById("incorrectAnswer").checked = false;
                     }
