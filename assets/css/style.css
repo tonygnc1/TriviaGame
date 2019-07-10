@@ -1,6 +1,6 @@
 body {
-    background-image: url("/triviaGame/assets/images/background.png");
-    background-color: aquamarine;
+    background-image: url("/TriviaGame/assets/images/background.png");
+    /* background-color: aquamarine; */
     max-width: 80%;
 }
 
@@ -12,11 +12,8 @@ body {
     width: 1800px;
     height: 600px;
     max-width: 80%;
-    margin:100px 50px 0px 300px;
+    margin:100px 150px 0px 250px;
     background-color: rgb(246, 242, 10);
-    /* opacity: 0.7;
-    filter: Alpha(opacity=90); */
-    
   }
 
   .header {
@@ -26,7 +23,7 @@ body {
     height: 175px;  
     width: 100%;
     padding: 75px;
-    margin: 100px 0px 0px 0px;
+    margin: 50px 500px 0px 0px;
     text-align: center;
   }
 
@@ -38,8 +35,7 @@ body {
     width: 250px;
     height: 75px;
     padding: 20px;
-    float: right;
-    margin: 0 auto;
+    margin: -10px -10px -10px -50px;
   }
 
   .form1 {
@@ -47,11 +43,9 @@ body {
     font-size: 35px;
     color: rgb(10, 10, 10);
     background-color: 'rgba(255, 255, 255, 0.5)';
-    width: 800px;
+    width: 700px;
     height: 75px;
-    padding: 10px;
-    float: none;
-    margin: 0px 100px 0px 450px;
+    padding: 5px;
   }
 
   .correct {
@@ -75,7 +69,7 @@ body {
     width:1100px;
     height: 100px;
     font-size: 80px;
-    margin: 20px 30px 20px 75px;
+    margin: 20px 30px 120px -50px;
     text-align: center;
     padding: 20px;
     color: rgb(231, 19, 19);
