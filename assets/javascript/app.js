@@ -13,8 +13,8 @@ var questions = [
 
 var answers = ["false", "true", "false", "false", "true"];
 var showQuestions;
-
-
+var questionsHolder=[];
+var anwersHolder=[];
 
 
 // Upon selecting start, the button will disappear and the question will appear in its place
@@ -31,13 +31,21 @@ $("#divHide").click(function() {
    
  
 
-  function showQuestions()
+  // function showQuestions()
 
  $("#reset").click(resetGame);
 
   function displayQuestions() {
-    $("question-holder").html()
+    $("questionsHolder").html()
   }
+
+  function check() {
+    document.getElementById("correctAnswer").checked = true;
+}
+function check() {
+    document.getElementById("incorrectAnswer").checked = false;
+}
+
 
   // The selected answer is shown an alert box with Correct or Incorrect Response
   if (checked == correctAnswer) {
