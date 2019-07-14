@@ -19,17 +19,27 @@ var anwersHolder = [];
 
 // Upon selecting start, the button will disappear and the question will appear in its place
 
-
-$(document).ready(function () {
-  <a id="button-to-hide" onclick="check()"></a>
-
-  $('#button-to-hide').hide();
-
+$("#startButton").on("click", function() {
+  console.log("It worked");
+  $("#subwrapper").remove();
 })
+
+// $(document).ready(function () {
+//   function startNewGame() {
+    
+
+//       console.log(click);
+//     }
+//   }
+
+// startNewGame()
+
+
+
 
   // function showQuestions()
 
-  $("#reset").click(resetGame);
+  
 
   function displayQuestions() {
     $("questionsHolder").html()
@@ -45,27 +55,27 @@ $(document).ready(function () {
 
   // The selected answer is shown an alert box with Correct or Incorrect Response
   if (checked == correctAnswer) {
-    document.getElementById("correctAnswer").textContent = ++correctAnswer;
+  document.getElementById("correctAnswer").textContent = ++correctAnswer;
+  startNewGame()
+  alert("Correct answer")
+  console.log(correctAnswer);
+
+  if (checked == incorrectAnswer) {
+    document.getElementById("incorrectAnswer").textContent = ++incorrectAnswer;
     startNewGame()
-    alert("Correct answer")
-    console.log(correctAnswer);
-
-    if (checked == incorrectAnswer) {
-      document.getElementById("incorrectAnswer").textContent = ++incorrectAnswer;
-      startNewGame()
-      alert("Incorrect answer")
-      console.log(incorrectAnswer);
-    }
+    alert("Incorrect answer")
+    console.log(incorrectAnswer);
   }
+}
+$("#reset").click(resetGame);
 
-
-  //    When the answer is selected and alert shown, a 2 second timer will hide the question
-  // and the next question will be unhid slowly in its place.
-
-
-
-
+//    When the answer is selected and alert shown, a 2 second timer will hide the question
+// and the next question will be unhid slowly in its place.
 
 
 
-  < script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script >
+
+
+
+
+< script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script >
