@@ -21,7 +21,7 @@ var anwersHolder = [];
 
 $("#startButton").on("click", function() {
   console.log("It worked");
-  $("#subwrapper").remove();
+  $("#startButton").remove();
 })
 
 // $(document).ready(function () {
@@ -78,4 +78,3 @@ $("#reset").click(resetGame);
 
 
 
-< script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script >
