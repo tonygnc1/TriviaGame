@@ -30,35 +30,33 @@
 
 
             <!-- Display answer choices -->
-            <div class="correct">
+            <!-- <div class="correct">
                 <p>Correct Answers:</p><span class="correctAnswer"></span>
                 <br>
                 <p>Incorrect Answers:</p><span class="incorrectAnswer"></span>
-            </div>
+            </div> -->
             <div class="form1">
                 <form>
 
                     <br>
-                    <input type="radio" name="colors" id="true">True<br>
+                    <input type="radio" name="colors" data-val="true">True<br>
                     <br>
 
-                    <input type="radio" name="colors" id="false">False
+                    <input type="radio" name="colors" data-val="false">False
+                    <div id="res"></div>
                     <br>
 
                 </form>
                 <br>
-
-                <button id="select" onclick="check()">Select Answer</button>
-
-                <script>
-                </script>
             </div>
+            <button id="select">Select Answer</button>
+
         </div>
     </div>
 
     </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
 

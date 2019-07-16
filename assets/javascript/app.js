@@ -1,10 +1,10 @@
-var correctAnswer = true;
-var incorrectAnswer = false;
+var wins = 0;
+var i = 0;
 var buttonChoice = "";
-
+var counter = 10;
 
 var questions = [
-  "The Flag has 50 stripes.",
+ "The Flag has 12 red stripes?",
   "The Statue of Liberty is in NY City.",
   "Betsy Ross wrote the Star Spangled Banner.",
   "The Man from Uncle was really his cousin.",
@@ -13,16 +13,23 @@ var questions = [
 
 var answers = ["false", "true", "false", "false", "true"];
 var showQuestions;
-var questionsHolder = [];
-var anwersHolder = [];
 
 
 // Upon selecting start, the button will disappear and the question will appear in its place
 
+$("#q") function() {
+  $("#p").hide();
+}
+
 $("#startButton").on("click", function() {
-  console.log("It worked");
-  $("#startButton").remove();
+    $("#startButton").remove();
 })
+
+function() {
+  if ("#startButton") ==.remove() {
+    $("#p").show();
+  }
+}
 
 // $(document).ready(function () {
 //   function startNewGame() {
