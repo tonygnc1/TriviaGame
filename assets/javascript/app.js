@@ -1,83 +1,53 @@
-var wins = 0;
-var i = 0;
-var buttonChoice = "";
-var counter = 10;
-
-var questions = [
- "The Flag has 12 red stripes?",
-  "The Statue of Liberty is in NY City.",
-  "Betsy Ross wrote the Star Spangled Banner.",
-  "The Man from Uncle was really his cousin.",
-  "Anne Margaret is the BOMB."
-];
-
-var answers = ["false", "true", "false", "false", "true"];
-var showQuestions;
+var currentQuestion = 0;
+var score = 0;
+var totQuestions = questions.length;
+var container = document.getElementById('quizcontainer');
+var questionEl = document.getElementById('question');
+var opt1 = document.getElementById('opt1');
+var opt2 = document.getElementById('opt2');
+var nextButton = document.getElementById('nextButton');
+var resultCont = document.getElementById('result');
+var resetButton = document.getElementById('resetButton');
 
 
-// Upon selecting start, the button will disappear and the question will appear in its place
+function loadQuestion (questionIndex) {
+  var q = questions[questionIndex];
+  questionEl.textContent = (questionIndex) + q.question;
+  opt1.textContent = q.option1;
+  opt2.textContent = q.option2;
+};
+function loadNextQuestion() {
+  event.preventDefault();
+  var selectedOption = document.querySelector('input[type=radio]:checked');
+  if (!selectedOption){
+    alert('Choose one or GO HOME');
+    return;
+  }
 
-$("#q") function() {
-  $("#p").hide();
+  var answer = selectedOption.value;
+  if(questions[currentQuestion].answer == answer) {
+    score += 1;
+  }
+  selectedOption.checked = false;
+  currentQuestion++;
+  if(currentQuestion == totQuestions){
+    nextButton.textContent = 'Finished';
+  }
+
+  if(currentQuestion == 4){
+    console.log(score);
+    container.style.display = 'none';
+    // $("#result").style.display = '';
+    resultCont.textContent = 'Your Score is ' + score;
+    return;
+  }
+  loadQuestion(currentQuestion + 1);
 }
 
-$("#startButton").on("click", function() {
-    $("#startButton").remove();
-})
 
-function() {
-  if ("#startButton") ==.remove() {
-    $("#p").show();
-  }
-}
+// console.log(currentQuestion);
 
-// $(document).ready(function () {
-//   function startNewGame() {
-    
-
-//       console.log(click);
-//     }
-//   }
-
-// startNewGame()
-
-
-
-
-  // function showQuestions()
-
-  
-
-  function displayQuestions() {
-    $("questionsHolder").html()
-  }
-
-  function check() {
-    document.getElementById("correctAnswer").checked = true;
-  }
-  function check() {
-    document.getElementById("incorrectAnswer").checked = false;
-  }
-
-
-  // The selected answer is shown an alert box with Correct or Incorrect Response
-  if (checked == correctAnswer) {
-  document.getElementById("correctAnswer").textContent = ++correctAnswer;
-  startNewGame()
-  alert("Correct answer")
-  console.log(correctAnswer);
-
-  if (checked == incorrectAnswer) {
-    document.getElementById("incorrectAnswer").textContent = ++incorrectAnswer;
-    startNewGame()
-    alert("Incorrect answer")
-    console.log(incorrectAnswer);
-  }
-}
-$("#reset").click(resetGame);
-
-//    When the answer is selected and alert shown, a 2 second timer will hide the question
-// and the next question will be unhid slowly in its place.
+loadQuestion(currentQuestion);
 
 
 

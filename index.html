@@ -14,50 +14,49 @@
 
 <body>
     <div class="body">
-        <div class="container">
-            <div class="h3">
-                <p>Totally Trivia Night</p>
-
-            </div>
-            <!-- Display the Start Button. -->
-
-
-            <button id="startButton">Let's Get Started</button>
-
-
-
-
-
-
-            <!-- Display answer choices -->
-            <!-- <div class="correct">
-                <p>Correct Answers:</p><span class="correctAnswer"></span>
-                <br>
-                <p>Incorrect Answers:</p><span class="incorrectAnswer"></span>
-            </div> -->
+        <div id="quizcontainer" class="container">
             <div class="form1">
                 <form>
+                    <div class="h3">
+                        <p>Totally Trivia Night</p>
+                    </div>
 
+                    <div id="question" class="question"></div>
                     <br>
-                    <input type="radio" name="colors" data-val="true">True<br>
+                    <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
                     <br>
-
-                    <input type="radio" name="colors" data-val="false">False
-                    <div id="res"></div>
                     <br>
+                    <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+                    <button id="nextButton" class="next-btn" onclick="loadNextQuestion()" ;>Next Question</button>
 
                 </form>
-                <br>
+
             </div>
-            <button id="select">Select Answer</button>
 
         </div>
-    </div>
+        <div id="result" class="container-result"></div>
 
-    </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+        <button id="resetButton" class="reset" type="submit"  onClick="refreshPage()">Reset</button>
+
+        <script>
+            function refreshPage(){
+                window.location.reload()
+            } 
+            </script> 
+            
+        <script src="./assets/javascript/question.js"></script>
+        <script src="./assets/javascript/app.js"></script>
+
+
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
 
 </html>
